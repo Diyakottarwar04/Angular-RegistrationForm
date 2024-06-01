@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+input, textarea, select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    border-radius: 6px;
+}

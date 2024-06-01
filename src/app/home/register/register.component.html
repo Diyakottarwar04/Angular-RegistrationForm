@@ -1,0 +1,44 @@
+<div class="container">
+  <h3>Registration Form</h3>
+
+    <RegisterForm [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input id="firstname" formControlName="firstName" class="form-control" />
+        <div *ngIf="RegisterForm.get('firstName').touched && RegisterForm.get('firstName').invalid" class="error">
+          First name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input id="lastname" formControlName="lastName" class="form-control" />
+        <div *ngIf="RegisterForm.get('lastName').touched && RegisterForm.get('lastName').invalid" class="error">
+          Last name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" class="form-control" />
+        <div *ngIf="RegisterForm.get('email').touched && RegisterForm.get('email').invalid" class="error">
+          Valid email is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input id="mobile" formControlName="mobile" class="form-control" />
+        <div *ngIf="RegisterForm.get('mobile').touched && RegisterForm.get('mobile').invalid" class="error">
+          Mobile number is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" formControlName="country" class="form-control">
+          <option value="India">India</option>
+          <option value="Canada">Canada</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <button type="submit" [disabled]="RegisterForm.invalid" class="btn btn-primary">Submit</button>
+    </RegisterForm>
+  </div>
+  
